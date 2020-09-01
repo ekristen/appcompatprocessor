@@ -1,7 +1,12 @@
 import settings
 import logging
 import multiprocessing
-import Queue
+
+try:
+    import queue
+except ImportError:
+    import Queue as queue
+
 import time
 from datetime import timedelta, datetime
 from appAux import psutil_phymem_usage

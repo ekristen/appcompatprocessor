@@ -3,7 +3,12 @@ __author__ = 'matiasbevilacqua'
 import logging
 from mpEngineProdCons import MPEngineProdCons
 from mpEngineWorker import MPEngineWorker
-import Queue
+
+try:
+    import queue
+except ImportError:
+    import Queue as queue
+
 import os
 import re
 import sqlite3

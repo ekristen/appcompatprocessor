@@ -1,7 +1,12 @@
 import logging
 import multiprocessing
 import signal
-import Queue
+
+try:
+    import queue
+except ImportError:
+    import Queue as queue
+
 import time
 
 class GracefulKiller:
